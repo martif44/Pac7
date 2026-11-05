@@ -30,7 +30,9 @@ Aplicació en React que consulta una **API pública real** per mostrar personatg
 - `useState`: guardar personatges, favorits, filtres, càrrega i errors.
 - **NOU** `useEffect`: carregar dades quan es munta l'aplicació i cada vegada que canvien els filtres o la pàgina.
 - **NOU** `fetch()`, `async/await`, `try/catch/finally`, `response.ok`, `response.json()`.
-- **NOVETAT: MODALS I SEGON FETCH**: en prémer «Veure detalls» es mostra `ModalPersonatge` i es consulta el primer episodi a `/api/episode/{id}` amb un segon `useEffect` i `fetch`.
+- **MODALS I SEGON FETCH**: en prémer «Veure detalls» es mostra `ModalPersonatge` i es consulta el primer episodi a `/api/episode/{id}` amb un segon `useEffect` i `fetch`.
+- **NOU: LINKS**: `<a href="#personatges">` i `<a href="#favorits">` naveguen a seccions. Els enllaços del modal obren la fitxa i l'episodi a l'API en una altra pestanya.
+- **NOU: MODE FOSC/CLAR AMB NAVBAR**: `useState(true)` controla `temaFosc`; el botó de `Navbar.jsx` alterna les classes `tema-fosc` i `tema-clar` i el CSS canvia l'aspecte. El tema inicial és el fosc original, que ja tenia l'aplicació.
 - `map()`: mostrar llistes de targetes.
 - `filter()`: afegir o eliminar favorits sense duplicats.
 - `props`: passar dades i funcions als components.
@@ -48,7 +50,8 @@ src/
 └── components/
     ├── ModalPersonatge.jsx   # Modal que fa el segon fetch a /episode
     ├── ModalPersonatge.css   # Estil del modal
-    ├── Capcalera.jsx         # Títol i comptadors
+    ├── Capcalera.jsx         # Capçalera i comptadors
+    ├── Navbar.jsx            # Links i botó mode clar / mode fosc
     ├── Filtres.jsx           # Cercador i 2 selectors
     ├── LlistatPersonatges.jsx# map(), component reutilitzat per favorits
     ├── TargetaPersonatge.jsx # Cada targeta i botó favorit
@@ -79,3 +82,9 @@ Els favorits es guarden amb `useState`. **Es perdran en refrescar la pàgina** p
 6. Es pot tancar amb el botó, prement Esc o fent clic fora del requadre.
 
 Els dos `fetch()` són diferents: el primer carrega els personatges i el segon es fa només en obrir el modal. No calen cookies ni cap base de dades.
+
+## Novetat: links i mode fosc
+
+- **Links interns**: a la capçalera `Personatges` i `Favorits` utilitzen `<a href="#personatges">` i `<a href="#favorits">`. Les seccions tenen `id` perquè l'enllaç hi porti (sense recarregar la pàgina).
+- **Links externs**: el modal incorpora dos enllaços a les dades JSON oficials (personatge i primer episodi) en una altra pestanya, amb `target="_blank"` i `rel="noopener noreferrer"`. El footer també enllaça l'API i la documentació.
+- **Mode fosc / clar**: el botó del component `Navbar.jsx` canvia l'estat `temaFosc` del component `App`. Es posa `className="aplicacio tema-fosc"` o `"aplicacio tema-clar"`; els estils de `App.css` ho adapten. El tema inicial és fosc per respectar el disseny preexistent. Sense cookies, `localStorage` ni noves dependències: en refrescar torna al fosc.

@@ -9,6 +9,7 @@ import PeuPagina from './components/PeuPagina';
 import ModalPersonatge from './components/ModalPersonatge';
 
 function App() {
+  const [temaFosc, setTemaFosc] = useState(true);
   const [personatges, setPersonatges] = useState([]);
   const [favorits, setFavorits] = useState([]);
   const [personatgeSeleccionat, setPersonatgeSeleccionat] = useState(null);
@@ -109,8 +110,13 @@ function App() {
   }
 
   return (
-    <>
-      <Capcalera total={total} favorits={favorits.length} />
+    <div className={'aplicacio ' + (temaFosc ? 'tema-fosc' : 'tema-clar')}>
+      <Capcalera
+        total={total}
+        favorits={favorits.length}
+        temaFosc={temaFosc}
+        setTemaFosc={setTemaFosc}
+      />
 
       <main className="contenidor contingut">
         <Filtres
@@ -124,7 +130,7 @@ function App() {
           netejarFiltres={netejarFiltres}
         />
 
-        <section className="seccio-personatges">
+        <section className="seccio-personatges" id="personatges">
           <div className="titol-seccio">
             <div>
               <p className="etiqueta">LA TEVA EXPLORACIÓ</p>
@@ -174,7 +180,7 @@ function App() {
           )}
         </section>
 
-        <section className="seccio-favorits">
+        <section className="seccio-favorits" id="favorits">
           <div className="titol-seccio">
             <div>
               <p className="etiqueta">LA TEVA COL·LECCIÓ</p>
@@ -208,7 +214,7 @@ function App() {
           tancarModal={() => setPersonatgeSeleccionat(null)}
         />
       )}
-    </>
+    </div>
   );
 }
 

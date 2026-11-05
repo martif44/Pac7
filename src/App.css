@@ -142,3 +142,89 @@
 .boto-detalls { width: 100%; margin-top: 16px; padding: 10px 12px; border: 1px solid #546846; border-radius: 9px; color: #c9f77c; background: #283b30; font-weight: 750; font-size: 12px; display: flex; justify-content: space-between; align-items: center; }
 .boto-detalls:hover { background: #344b35; }
 .boto-detalls span { font-size: 16px; }
+
+
+/* NOVETAT: links interns (anchors) i botó per canviar el tema */
+.aplicacio { min-height: 100vh; background: #10151d; color: #f4f6f9; transition: background-color .2s, color .2s; }
+.marca { text-decoration: none; color: inherit; }
+.nav-enllac { color: #c1cdd9; text-decoration: none; white-space: nowrap; font-size: 12px; letter-spacing: 0; }
+.nav-enllac:hover, .marca:hover { color: #d4fc6a; }
+.boto-tema { color: #e6f1e0; background: #2c3b40; border: 1px solid #51614b; border-radius: 9px; padding: 11px 13px; font-weight: 750; font-size: 12px; white-space: nowrap; }
+.boto-tema:hover { background: #435746; }
+.enllac-api { display: inline-flex; align-items: center; margin-top: 8px; color: #c6f671; font-weight: 700; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+.enllac-api:hover { color: #e4ffa9; }
+.enllac-fitxa { margin-top: 22px; }
+#personatges, #favorits { scroll-margin-top: 24px; }
+a:focus-visible, button:focus-visible { outline: 3px solid #b0e869; outline-offset: 3px; }
+
+/* Mode clar: el fosc original continua sent el tema inicial */
+.aplicacio.tema-clar { background: #f3f6f7; color: #1c2c37; }
+.tema-clar .capcalera { background: #eaf1eb; border-bottom-color: #d3dfd8; }
+.tema-clar .marca, .tema-clar .nav-enllac { color: #233b36; }
+.tema-clar .nav-enllac:hover { color: #237d50; }
+.tema-clar .marca-punt, .tema-clar .hero h1 span, .tema-clar .titol-seccio h2 span { color: #267f53; }
+.tema-clar .marca-icon { background: #316e4a; color: #eaffb4; }
+.tema-clar .boto-tema { background: #fff; color: #23553c; border-color: #bdd5c7; }
+.tema-clar .boto-tema:hover { background: #dbefdf; }
+.tema-clar .sobretitol, .tema-clar .etiqueta, .tema-clar .filtres-cap .etiqueta, .tema-clar .titol-seccio .etiqueta, .tema-clar .id-personatge { color: #267f53; }
+.tema-clar .hero-descripcio { color: #59726c; }
+.tema-clar .indicador strong { color: #213b33; }
+.tema-clar .indicador span { color: #5b746a; }
+.tema-clar .separador-indicadors { background: #b9cbc0; }
+.tema-clar .hero-decoracio { border-color: rgba(60, 139, 85, .18); }
+.tema-clar .hero-planeta { color: #479665; text-shadow: 0 0 70px #7dc78a; }
+.tema-clar .panell-filtres { background: #fff; border-color: #dbe4df; box-shadow: 0 12px 38px rgba(45,78,61,.06); }
+.tema-clar .boto-netejar { color: #47685b; }
+.tema-clar .boto-netejar:hover { color: #236b47; }
+.tema-clar .camp label { color: #456055; }
+.tema-clar .camp input, .tema-clar .camp select { background: #f7faf8; border-color: #d0dfd5; color: #233b33; }
+.tema-clar .camp input::placeholder { color: #8a9d92; }
+.tema-clar .boto-cercar { background: #317e52; color: #fff; }
+.tema-clar .boto-cercar:hover { background: #246541; }
+.tema-clar .total-resultats { background: #e7eee9; color: #3c6351; border-color: #c9dacd; }
+.tema-clar .missatge-estat { background: #fff; border-color: #ccdbd2; }
+.tema-clar .missatge-estat p { color: #577266; }
+.tema-clar .missatge-icon, .tema-clar .carregant-icon { color: #28784c; }
+.tema-clar .missatge-estat button { background: #e5f0e8; border-color: #b9d2c1; color: #20553b; }
+.tema-clar .targeta-personatge { background: #fff; border-color: #dbe5e0; box-shadow: 0 4px 18px rgba(35,70,49,.05); }
+.tema-clar .targeta-personatge:hover { border-color: #7bbf8e; box-shadow: 0 12px 28px rgba(40,85,48,.12); }
+.tema-clar .targeta-imatge { background: #e3ede5; }
+.tema-clar .targeta-dades { border-top-color: #e5ece7; }
+.tema-clar .targeta-dades span { color: #667f73; }
+.tema-clar .targeta-dades strong { color: #2b4036; }
+.tema-clar .boto-detalls { color: #246e46; background: #e8f5eb; border-color: #bfdac5; }
+.tema-clar .boto-detalls:hover { background: #d3edd9; }
+.tema-clar .paginacio button { background: #fff; color: #2b4e3c; border-color: #c8d9cf; }
+.tema-clar .paginacio button:hover:not(:disabled) { background: #e6f3e8; }
+.tema-clar .paginacio span { color: #61776b; }
+.tema-clar .paginacio span strong { color: #236d43; }
+.tema-clar .seccio-favorits { border-top-color: #d9e4dd; }
+.tema-clar .favorits-buits { color: #587369; border-color: #c7d9ce; background: #fff; }
+.tema-clar .favorits-buits span { color: #317e52; }
+.tema-clar .peu-pagina { background: #e8f0eb; border-top-color: #d2e0d6; }
+.tema-clar .peu-contingut p { color: #526f5e; }
+.tema-clar .peu-contingut a { color: #206b44; }
+/* El modal també canvia de tema */
+.tema-clar .modal-fons { background: rgba(24, 38, 29, .42); }
+.tema-clar .modal-caixa { background: #fff; border-color: #cbdcd1; box-shadow: 0 30px 90px rgba(25,50,33,.24); }
+.tema-clar .modal-tancar { color: #294436; border-color: #c9ddd0; background: #edf5ef; }
+.tema-clar .modal-tancar:hover { background: #dceee1; }
+.tema-clar .modal-etiqueta { color: #267f53; }
+.tema-clar .modal-dades { border-color: #dfe9e1; }
+.tema-clar .modal-dades span { color: #6c8477; }
+.tema-clar .modal-episodi { background: #f3f8f4; border-color: #d4e5d9; }
+.tema-clar .modal-episodi-dades > strong { color: #1e6844; }
+.tema-clar .modal-episodi-dades p, .tema-clar .modal-missatge { color: #516e60; }
+.tema-clar .modal-episodi-dades b { color: #234735; }
+.tema-clar .modal-error { color: #b42b2b; }
+.tema-clar .enllac-api { color: #217247; }
+.tema-clar .enllac-api:hover { color: #15542f; }
+.tema-clar .modal-boto-final { background: #317e52; color: white; }
+.tema-clar .modal-boto-final:hover { background: #246541; }
+
+@media (max-width: 780px) {
+  .nav { min-height: 76px; height: auto; padding: 12px 0; gap: 12px; flex-wrap: wrap; }
+  .nav-dreta { gap: 11px; flex-wrap: wrap; }
+  .nav-enllac { font-size: 12px; }
+  .boto-tema { padding: 9px 11px; }
+}

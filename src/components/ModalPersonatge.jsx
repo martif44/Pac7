@@ -122,9 +122,16 @@ function ModalPersonatge({ personatge, tancarModal }) {
               <strong>{episodi.name}</strong>
               <p>Temporada i episodi: <b>{episodi.episode}</b></p>
               <p>Data d'emissió: <b>{episodi.air_date}</b></p>
+              <a className="enllac-api" href={episodi.url} target="_blank" rel="noopener noreferrer">
+                Veure dades de l'episodi a l'API ↗
+              </a>
             </div>
           )}
         </div>
+
+        <a className="enllac-api enllac-fitxa" href={personatge.url} target="_blank" rel="noopener noreferrer">
+          Veure fitxa del personatge a l'API ↗
+        </a>
 
         <button type="button" className="modal-boto-final" onClick={tancarModal}>
           Tancar detalls
