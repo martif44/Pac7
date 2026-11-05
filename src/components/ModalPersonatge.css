@@ -1,0 +1,67 @@
+/* Modal: mateixa estètica fosca i verd llima de MULTIVERS */
+.modal-fons {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(4, 8, 13, .78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  backdrop-filter: blur(7px);
+}
+
+.modal-caixa {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  max-height: calc(100vh - 44px);
+  overflow-y: auto;
+  background: #1b2632;
+  border: 1px solid #495862;
+  border-radius: 20px;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, .5);
+  padding: 30px;
+}
+
+.modal-tancar {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #445463;
+  border-radius: 10px;
+  background: #273545;
+  color: #e7eff8;
+  font-size: 25px;
+  line-height: 1;
+}
+.modal-tancar:hover { background: #384c60; }
+.modal-capcalera { display: flex; align-items: center; gap: 22px; padding-right: 35px; }
+.modal-capcalera img { width: 138px; height: 138px; border-radius: 13px; object-fit: cover; }
+.modal-capcalera h2 { font-size: clamp(23px, 4vw, 33px); line-height: 1.12; margin: 8px 0 14px; }
+.modal-etiqueta { color: #c5f56b; font-size: 10px; font-weight: 800; letter-spacing: 1.6px; margin: 0; }
+.modal-estat { position: static; width: fit-content; }
+.modal-dades { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px 22px; border-top: 1px solid #344555; border-bottom: 1px solid #344555; padding: 24px 0; margin-top: 26px; }
+.modal-dades div { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.modal-dades span { color: #8da2b4; font-size: 12px; }
+.modal-dades strong { font-size: 14px; font-weight: 650; overflow-wrap: anywhere; }
+.modal-episodi { margin-top: 25px; background: #14202b; border: 1px solid #384a57; border-radius: 13px; padding: 22px; }
+.modal-episodi h3 { margin: 9px 0 16px; font-size: 20px; }
+.modal-episodi-dades > strong { color: #e2ffad; display: block; font-size: 18px; }
+.modal-episodi-dades p, .modal-missatge { font-size: 13px; color: #9db0c0; line-height: 1.5; }
+.modal-episodi-dades b { color: #ebf1f8; }
+.modal-error { color: #ffaaa3; font-size: 13px; }
+.modal-boto-final { display: block; width: 100%; margin-top: 22px; padding: 13px 18px; border: 0; border-radius: 10px; background: #c7f56c; color: #142018; font-size: 13px; font-weight: 800; }
+.modal-boto-final:hover { background: #dfff95; }
+
+@media (max-width: 540px) {
+  .modal-caixa { padding: 20px; }
+  .modal-capcalera { align-items: flex-start; gap: 13px; }
+  .modal-capcalera img { width: 92px; height: 92px; }
+  .modal-capcalera h2 { font-size: 22px; }
+  .modal-dades { gap: 14px 10px; }
+  .modal-dades strong { font-size: 12px; }
+  .modal-episodi { padding: 15px; }
+}
